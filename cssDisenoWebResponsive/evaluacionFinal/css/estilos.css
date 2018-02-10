@@ -1,7 +1,20 @@
+*{
+	font-family:'Dancing Script';
+}
 body{
 	background-color: #02010a;
 }
-
+h4{
+	height: 40px;
+    padding-top: 20px;
+    font-size: 16px;
+}
+p{
+	margin:0;
+}
+header{
+	height:40px;
+}
 #cabecera{
 	border-top-left-radius: 10px;
 	border-top-right-radius: 10px;
@@ -10,6 +23,7 @@ body{
 	height: 25%;
 	margin-left: 25%;
 	margin-right: 25%;
+	padding-left: 10px;
 }
 #cabecera label{
 	color: white;
@@ -23,13 +37,62 @@ body{
 #cabecera #menu .actual {
 	text-decoration: none;
 }
-
-
-#imagenCentral{
-	background-color: #82c3a6;
+ul#menu{
+	    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    margin-top: -30px;
+    margin-bottom: 22px;
 }
-#imagenSecundaria{
+ul#menu li{
+	float: left;
+}
+
+ul#menu li a{
+    display: block;
+    padding-left: 8px;
+    text-decoration: none;
+    color: #FFF;
+    margin-right: 10px;
+    text-transform: capitalize;
+}
+ul#menu li a:hover{
+	text-decoration:underline;
+}
+
+#imgCentral{
+	background-color: #82c3a6;
+	margin-left: 25%;
+    margin-right: 25%;
+}
+#imgCentral img{
+	width:450px;
+	margin-left: 18%;
+	margin-bottom: 15px;
+}
+
+#imgSecundaria{
 	background-color:  #d5c75f;
+	margin-left: 25%;
+    margin-right: 25%;
+}
+#imgSecundaria img{
+	width:450px;
+	margin-left: 18%;
+	margin-bottom: 15px;
+}
+
+#imgSecundaria img#right{
+	    float: right;
+    margin-right: 5%;
+    margin-top: -27.7%;
+    width: 247px;
+}
+#imgSecundaria img#left{
+	width: 290px;
+    margin-left: 5%;
+    margin-bottom: 15px;
+    margin-top: 25px;
 }
 .imagen1{
 	-webkit-filter:blur(10px);
@@ -49,7 +112,18 @@ body{
 .imagen6{
 	-webkit-filter:grayscale(100%);
 }
-
+/* centro*/
+#center{
+	
+}
+/* derecha*/
+#right{
+	
+}
+/* izquierda*/
+#left{
+	
+}
 /* para moviles*/
 @media (min-width: 260px) and (max-width: 900px){
 	#contenido{
@@ -75,4 +149,7 @@ footer{
 	border-bottom-right-radius: 10px;
 	border-bottom-left-radius: 10px;
 	background-color: #C6D5C5;
+	margin-left: 25%;
+	margin-right: 25%;
+	padding-left: 10px;
 }
