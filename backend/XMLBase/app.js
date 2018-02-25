@@ -8,12 +8,13 @@
             if (username !== "") {
                 var XHR = new XMLHttpRequest();
                 var URLUser = URL + username;
-                XHR.open('GET', URLUser);
+                //XHR.open('GET', URLUser); // peticion asincrona
+                XHR.open('GET', URLUser,false);//peticion sincrona
                 XHR.onreadystatechange = function() {
                     if (XHR.readyState === 4) {
                         var data = JSON.parse(XHR.responseText);
                         if (data.message && data.message == 'Not Found') {
-                            alert('El uusario no existe en github');
+                            alert('El usuario no existe en github');
                         } else {
                             $('img').attr('src', data.avatar_url);
                             $('.name').text(data.name);
