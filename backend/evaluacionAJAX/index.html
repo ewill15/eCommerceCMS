@@ -1,0 +1,100 @@
+<html>
+	<head>
+		<meta charset='utf8'>
+		<title>Comentarios</title>
+	</head>
+	<script
+	src="https://code.jquery.com/jquery-2.2.4.js"
+	integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+	crossorigin="anonymous"></script>
+	<script>
+
+
+	function  cargarMasComentarios(){
+
+		$.ajax({
+			url: 'comentarios.json',
+			type: 'GET',
+			datatype:'json',
+			data:{},
+			success:function(data){
+				$('.comentario').append('lol');/*
+				$('.autor').text('Por '+data.autor+' - ');
+				$('.fecha').text(data.fecha);
+				$('.description').text(data.comentario);*/
+			}
+		});
+
+	}
+
+	$( document ).ready(function() {
+
+		//funcion para detectar cuando se llega al final del scroll
+		$(window).on('scroll', function(){
+			if( $(window).scrollTop() > $(document).height() - $(window).height() ) {
+				cargarMasComentarios();
+			}
+		}).scroll();
+
+		$( ".cargar-mas button" ).click(function() {
+			cargarMasComentarios();
+		});
+	});
+	</script>
+	<style>
+		body{
+			font-family: Arial;
+			font-size: 12pt;
+		}
+		.principal{
+			padding: 5px;
+			width: 250px;
+		}
+		.principal h1{
+			padding: 10px;
+			border-radius: 10px;
+			background-color: orange;
+			color: white;
+			text-align: center;
+		}
+		button{
+			float: right;
+			background-color: #0084c1;
+			border-radius: 5px;
+			color: #FFFFFF;
+		}
+		.autor{
+			font-weight: bold;
+			color: #a07606;
+			margin-bottom: 5px;
+		}
+		.fecha{
+			font-style: italic;
+			font-weight: normal;
+			font-size: 10px;
+			color: #000000;
+		}
+		.comentario{
+			background-color: #ecbe43;
+			border-radius: 7px;
+			padding: 10px;
+			margin-bottom: 7px;
+		}
+
+	</style>
+	<body>
+		<div class="principal">
+			<h1>Comentarios</h1>
+			<div class="comentarios">
+				<div class="comentario">
+					<div class="autor">Por Luis - <span class="fecha">Hace dos minutos</span></div>
+					<div class="description">Queria hacer un comentario largo que describa un poco la situacion que actualmente tenemos</div>
+				</div>
+
+			</div>
+			<div class="cargar-mas">
+				<button >Ver más</button>
+			</div>
+		</div>
+	</body>
+</html>
