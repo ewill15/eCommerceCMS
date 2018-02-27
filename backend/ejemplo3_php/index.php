@@ -11,7 +11,7 @@ const MODULO_PADRE = array('reuniones','registro de Notas');
 
 #Crea una variable que almacene el tipo de usuario que accede a la página, su valor puede ser profesor, estudiante o padre
 $lista_tipos_usuario = array('profesor','estudiante','padre');
-$tipoUsuario = $lista_tipos_usuario[2];
+$tipoUsuario = $lista_tipos_usuario[0];
 /*
 Muestra el contenedor de la clase mod-container correspondiente de acuerdo al valor de la variable definida en el paso anterior.
 Esto quiere decir que si la variable tiene el valor ‘profesor’ sólo se debe mostrar en la página el contenedor
