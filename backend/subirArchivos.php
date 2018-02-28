@@ -23,4 +23,16 @@ if ($tipoArchivo != "png" && $tipoArchivo != "jpg" && $tipoArchivo != "jpeg" && 
   $respuestas["mensaje"] = "Solo se permiten archivos JPG,JPEG,PNG,GIF";
   $exito = false;
 }
+if($exito == false){
+  $respuestas["mensaje"]="Lo sentimos, tu archivo no fue anadido";
+}else{
+  if(move_uploaded_file($_FILES["file"]["tmp_name"],$archivo_a_subir)){
+    $respuestas["final"]="El archivo ".basename($nombreImagen)." ha sido agregado";
+    $respuestas["mensaje"]="";
+    $respuestas["newSource"]= $archivo_a_subir;
+  }else{
+    $respuestas["final"]="Lo sentimos, tu archivo no fue agregado";
+  }
+}
+
  ?>
