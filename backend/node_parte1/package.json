@@ -1,0 +1,26 @@
+{
+  "name": "proyecto_parte1",
+  "version": "1.0.0",
+  "description": "inicio de proyecto nodeJS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm run build && NODE_PATH=./ node dist/src/server",
+    "public": "mkdir -p public && cp -r src/client/css public/ && cp src/client/index.html public/",
+    "build-js": "NODE_PATH=. browserify src/client/js/index.js -o public/app.js -t [ babelify --presets [ es2015 ] ]",
+    "build": "npm run compile-server && npm run public && npm run build-js",
+    "compile-server": "babel src/server/index.js src/server/**/*.js --out-dir dist --presets es2015"
+  },
+  "author": "Edwin W. Arandia Zeballos",
+  "license": "ISC",
+  "dependencies": {
+    "babel-preset-es2015": "^6.24.1",
+    "babelify": "^8.0.0",
+    "browserify": "^16.1.0",
+    "express": "^4.16.2",
+    "jquery": "^3.3.1",
+    "socket.io": "^2.0.4",
+    "socket.io-client": "^2.0.4",
+    "watchify": "^3.10.0"
+  }
+}
