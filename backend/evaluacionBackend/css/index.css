@@ -1,15 +1,3 @@
-video#vidFondo {
-    position: fixed;
-    min-width: 100%;
-    min-height: 100%;
-    width: 100%;
-    height: auto;
-    z-index: -100;
-    left: 0;
-    top: 0;
-    background-size: cover;
-
-}
 
 .contenedor{
   background-color: rgba(242, 242, 242, 0.5);
@@ -137,9 +125,19 @@ video#vidFondo {
   font-size: 1.3rem;
   color: #ffab40;
 }
+.card-image{
+  width: 35%;
+}
 .card-stacked{
   width: 65%;
 }
-.card-action{
+.card-stacked .card-action{
   text-align: right;
+}
+.card .card-action a:not(.btn):not(.btn-large):not(.btn-large):not(.btn-floating){
+  color:#ccc;
+  font-weight: 700;
+}
+.card .card-action a:not(.btn):not(.btn-large):not(.btn-large):not(.btn-floating):hover{
+  color:rgb(160, 158, 158);
 }
