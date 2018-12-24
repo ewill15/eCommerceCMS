@@ -55,11 +55,15 @@ $(document).ready(function(){
 //Funcion para agregar y renderizar los resultados en la pagina
 function showResult(array){
   var mostrarResultado = '.showResult';
+
   $(mostrarResultado).empty();
   for(let i=0; i<array.length; i++){
-      $(mostrarResultado).append(`<div class="card horizontal">
-      <div class="card-image">
-        <img src="img/${array[i].Ciudad}.jpg" alt="${array[i].Ciudad}">
+    ciudad = array[i].Ciudad;
+    
+    
+    $(mostrarResultado).append(function(){
+      $(this).append(`<div class="card horizontal">
+      <div class="card-image" style="background-image:url('img/${array[i].Ciudad}.jpg')">
       </div>
       <div class="card-stacked">
         <div class="card-content">
@@ -76,7 +80,15 @@ function showResult(array){
           <a href="#" class="more">Ver mas</a>
         </div>
       </div>
-    </div>`);
+    </div>`);   
+    /*$.each(array,function(key,value){
+      $(this).css('background-image','url(img/'+ciudad+'.jpg)');
+    });*/
+    
+    });
+    /*
+     
+    */
   }
 }
 

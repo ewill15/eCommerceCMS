@@ -127,6 +127,8 @@
 }
 .card-image{
   width: 35%;
+  background-size: cover;
+  background-position: 50% 50%;
 }
 .card-stacked{
   width: 65%;
@@ -135,9 +137,12 @@
   text-align: right;
 }
 .card .card-action a:not(.btn):not(.btn-large):not(.btn-large):not(.btn-floating){
-  color:#ccc;
+  color:rgba(0,0,0,0.87);
   font-weight: 700;
 }
 .card .card-action a:not(.btn):not(.btn-large):not(.btn-large):not(.btn-floating):hover{
   color:rgb(160, 158, 158);
+}
+.showResult{
+  width: 100%;
 }
