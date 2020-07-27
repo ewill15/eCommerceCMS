@@ -2,4 +2,6 @@
 *.pyc
 *.pyo
 cssDisenoWebResponsive/rar
-backend/rar
+/backend/rar
+/backend/node_parte1/node_modules/*
+/backend/node_parte1_solucion/node_modules/*
